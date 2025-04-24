@@ -15,9 +15,7 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [\App\Http\Controllers\PostController::class, 'index'])->name('home');
 
 Route::get('users', [UserController::class, 'index'])->name('users.index');
 
